@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Final Project</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize.min.css" media="screen,projection" />
+    <!-- Custom styles for this template -->
+    <link href="/simple-sidebar.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <img src="/CoConstructSmall.png" class="img-responsive center-block" id="home-logo">
+                </li>
+                <li>
+                    <h4>Clients</h4>
+                </li>
+                <li>
+                    <a href="client1.html">Wesley Martin</a>
+                </li>
+                <li>
+                    <a href="client2.html">Houston Crosby</a>
+                </li>
+                <li>
+                    <a href="client3.html">Davin Patel</a>
+                </li>
+                <li>
+                    <a href="client4.html">Praveen Peruri</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="page-header">
+                <a href="#menu-toggle" id="menu-toggle">
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </a>
+                <h1>Wesley Martin</h1>
+            </div>
+            <div class="container-fluid">
+                <!-- Page Content goes here -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Project Description</th>
+                                        <th>Proposed Budget</th>
+                                        <th>Actual Budget</th>
+                                        <th>Completion Date</th>
+                                        <th>Time Remaining</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="display1">
+                                </tbody>
+                                <tbody id="display2">
+                                </tbody>
+                                <tbody id="display3">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/bio.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Contact Info<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Contact Info<i class="material-icons right">close</i></span>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name-input" placeholder="Client Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="address-input" placeholder="Project Address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email-input" placeholder="Client Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="phone-input" placeholder="Client Phone #" required>
+                                    </div>
+                                    <button type="button" id="contact-submit" name="submit" class="btn btn-primary pull-left ">Save
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Budget.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Budget / Timeline<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Project 1<i class="material-icons right">close</i></span>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="project-input1" placeholder="Project Description" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="budget-input1" placeholder="Proposed Budget" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="actualBudget-input1" placeholder="Actual Budget" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="timeline-input1" placeholder="Proposed Timeline (days)" required>
+                                    </div>
+                                    <span class="card-title grey-text text-darken-4">Project 2</span>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="project-input2" placeholder="Project Description" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="budget-input2" placeholder="Proposed Budget" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="actualBudget-input2" placeholder="Actual Budget" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="timeline-input2" placeholder="Proposed Timeline (days)" required>
+                                        </div>
+                                        <span class="card-title grey-text text-darken-4">Project 3</span>
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="project-input3" placeholder="Project Description" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="budget-input3" placeholder="Proposed Budget" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="actualBudget-input3" placeholder="Actual Budget" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="date" class="form-control" id="timeline-input3" placeholder="Proposed Timeline (days)" required>
+                                            </div>
+                                            <button type="button" id="budget-submit" name="submit" class="btn btn-primary pull-left ">Save
+                                            </button>
+                                        </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Timeline.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Progress<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Progress<i class="material-icons right">close</i></span>
+                                <b>Kitchen</b>
+                                <p>40%</p>
+                                <hr>
+                                <b>Bathroom</b>
+                                <p>60%</p>
+                                <hr>
+                                <b>Patio</b>
+                                <p>75%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/Files.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Files<i class="material-icons right">more_vert</i></span>
+                            <p></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Files<i class="material-icons right">close</i></span>
+                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+                            
+            <h1>Upload File</h1>
+            
+            <div class="col-md-6"></div>
+            <input type="file" id="fileButton"/>
+            <label id="lblFile"></label>
+           
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/Pictures.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Images<i class="material-icons right">more_vert</i></span>
+                            <p></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Images<i class="material-icons right">close</i></span>
+                            <div id="displayImages"></div>
+                            <!-- <p><a href="#">This is a link</a></p>
+                            <p><a href="#">This is a link</a></p>
+                            <p><a href="#">This is a link</a></p>
+                            <p><a href="#">This is a link</a></p>
+                            <p><a href="#">This is a link</a></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="/comments.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Comments<i class="material-icons right">more_vert</i></span>
+                            <p></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Comments<i class="material-icons right">close</i></span>
+                            <p>Commenting function will go here if we can figure it out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <script type="text/javascript" src="/javascript.js" </script>
+    < script src = "https://code.jquery.com/jquery-3.1.1.min.js" >
+    </script>
+</body>
+
+</html>

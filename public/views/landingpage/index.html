@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Final Project</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize.min.css" media="screen,projection" />
+    <!-- Custom styles for this template -->
+    <link href="/simple-sidebar.css" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <meta name="google-signin-client_id" content="188220526935-1cg1r7gmee8bsg399av8i9teg93b9ql8.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="homeBackground" style="height: 700px">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <img src="/CoConstruct.png" class="img-responsive center-block" id="home-logo">
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <!-- Modal Test -->
+                <!-- Modal Trigger -->
+                <!-- Modal Trigger -->
+                <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button>
+                
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div> -->
+                <!-- Sign In -->
+                <div class="card">
+                    <div class="card-content">
+                        <p>Connecting homeowners and contractors on projects.</p>
+                        <hr>
+                    </div>
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab"><a href="#test4"><h4>CONTRACTORS</h4></a></li>
+                            <li class="tab"><a href="#test5"><h4>CLIENTS</h4></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                        <div id="test4">
+                            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        </div>
+                        <div id="test5">
+                            <div class="g-signin2" data-onsuccess="onSignIn1" style="float: right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        window.location.href = "https://houstonc11.github.io/CoConstruct/client1";
+    }
+
+    function onSignIn1(googleUser) {
+        var profile = googleUser.getBasicProfile();
+
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        window.location.href = "https://houstonc11.github.io/CoConstruct/clientPortal";
+    }
+
+    //Modal
+    </script>
+    <!-- <script>
+   $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+    </script> -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize.min.js"></script>
+    <!-- Tav Script -->
+    <script>
+    $(document).ready(function() {
+        $('ul.tabs').tabs();
+    });
+    $(document).ready(function() {
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+    });
+    </script>
+    <script type="text/javascript" src="/javascript.js" </script>
+    < script src = "https://code.jquery.com/jquery-3.1.1.min.js" >
+    </script>
+</body>
+
+</html>

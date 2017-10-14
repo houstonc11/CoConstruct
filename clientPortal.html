@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Final Project</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize.min.css" media="screen,projection" />
+    <!-- Custom styles for this template -->
+    <link href="/simple-sidebar.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="page-header">
+                <h2 id="clientVewName">Wesley Martin</h2>
+            </div>
+            <div class="container-fluid">
+                <!-- Page Content goes here -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/bio.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Contact Info<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Contractor Info<i class="material-icons right">close</i></span>
+                                <b>Project Address</b>
+                                <p id="address"></p>                                  
+                                <hr>
+                                <b>Phone #</b>
+                                <p id="phone"></p>
+                                <hr>
+                                <b>Email</b>
+                                <p id="email"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Budget.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Budget<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Budget<i class="material-icons right">close</i></span>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Project Description</th>
+                                            <th>Proposed Budget</th>
+                                            <th>Actual Budget</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="clientViewProject1">
+                                    </tbody>
+                                     <tbody id="clientViewProject2">
+                                    </tbody>
+                                     <tbody id="clientViewProject3">
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Timeline.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Timeline<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Timeline<i class="material-icons right">close</i></span>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Project Description</th>
+                                            <th>Proposed Timeline</th>
+                                            <th>Time Remaining</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="clientViewTimeline1">
+                                    </tbody>
+                                       <tbody id="clientViewTimeline2">
+                                    </tbody>
+                                       <tbody id="clientViewTimeline3">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Files.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Files<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Files<i class="material-icons right">close</i></span>
+                                <p><a href="#">This is a link</a></p>
+                                <p><a href="#">This is a link</a></p>
+                                <p><a href="#">This is a link</a></p>
+                                <p><a href="#">This is a link</a></p>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Pictures.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Images<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Images<i class="material-icons right">close</i></span>
+                                <div id="displayImages"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/comments.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Comments<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Comments<i class="material-icons right">close</i></span>
+                                <p>Commenting function will go here if we can figure it out.</p>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <script type="text/javascript" src="/javascript.js"</script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</body>
+
+</html>
