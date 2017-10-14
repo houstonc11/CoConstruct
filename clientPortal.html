@@ -44,7 +44,7 @@
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-4">Contractor Info<i class="material-icons right">close</i></span>
                                 <b>Project Address</b>
-                                <p id="address"></p>                                  
+                                <p id="address"></p>
                                 <hr>
                                 <b>Phone #</b>
                                 <p id="phone"></p>
@@ -75,11 +75,10 @@
                                     </thead>
                                     <tbody id="clientViewProject1">
                                     </tbody>
-                                     <tbody id="clientViewProject2">
+                                    <tbody id="clientViewProject2">
                                     </tbody>
-                                     <tbody id="clientViewProject3">
+                                    <tbody id="clientViewProject3">
                                     </tbody>
-                                    
                                 </table>
                             </div>
                         </div>
@@ -99,15 +98,15 @@
                                     <thead>
                                         <tr>
                                             <th>Project Description</th>
-                                            <th>Proposed Timeline</th>
+                                            <th>Completion Date</th>
                                             <th>Time Remaining</th>
                                         </tr>
                                     </thead>
                                     <tbody id="clientViewTimeline1">
                                     </tbody>
-                                       <tbody id="clientViewTimeline2">
+                                    <tbody id="clientViewTimeline2">
                                     </tbody>
-                                       <tbody id="clientViewTimeline3">
+                                    <tbody id="clientViewTimeline3">
                                     </tbody>
                                 </table>
                             </div>
@@ -126,11 +125,11 @@
                             </div>
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-4">Files<i class="material-icons right">close</i></span>
-                                <p><a href="#">This is a link</a></p>
-                                <p><a href="#">This is a link</a></p>
-                                <p><a href="#">This is a link</a></p>
-                                <p><a href="#">This is a link</a></p>
-                                <p><a href="#">This is a link</a></p>
+                                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+                                <h1>Upload File</h1>
+                                <div class="col-md-6"></div>
+                                <input type="file" id="fileButton" />
+                                <label id="lblFile"><a href="https://firebasestorage.googleapis.com/v0/b/coconstruct-471a8.appspot.com/o/files%2FRenovation-Contract.pdf?alt=media&token=8931e996-5dce-43fb-94a2-36087670eacb"><img class=img-thumbnail height=150px width=150px src="https://user-images.githubusercontent.com/7325075/26889488-f58c9e6e-4b73-11e7-926e-7ecb7e69aaa9.png"></a><br><br>></label>
                             </div>
                         </div>
                     </div>
@@ -160,14 +159,18 @@
                             </div>
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-4">Comments<i class="material-icons right">close</i></span>
-                                <p>Commenting function will go here if we can figure it out.</p>
+                                <ul id="messages">
+                                    <div class="col-md-6"></div>
+                                </ul>
+                                <input type="text" width="100" id="msg">
+                                <input type="button" width="20" value="Send" id="send"
+                                class="btn btn-primary pull-left ">
                             </div>
-                        </div>                     
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
@@ -185,8 +188,9 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-    <script type="text/javascript" src="/javascript.js"</script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascript.js" </script>
+    <script src = "https://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
 </body>
 
 </html>

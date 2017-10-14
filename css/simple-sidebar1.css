@@ -7,16 +7,21 @@ body {
 }
 
 h1 {
-    font-family: "Open Sans Condensed";
-    font-weight: 300;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
     color: #fcfcfc;
     float: right;
 }
 
-.col {
-    margin-bottom: 30px;
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    float: right;
+}
+
+a:hover {
+    text-decoration: none !important;
 }
 
 #wrapper {
@@ -54,7 +59,7 @@ h1 {
 
 .page-header {
     padding: 20px;
-    background-color: #404040;
+    background-color: #2980b9;
 }
 
 #page-content-wrapper {
@@ -66,7 +71,10 @@ h1 {
 
 .container-fluid {
     background-color: #fcfcfc;
-    padding: 30px;
+}
+
+#homeBackground {
+    background-color: #fcfcfc
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -94,16 +102,12 @@ h1 {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    font-family: "Open Sans Condensed", sans-serif;
-    letter-spacing: 1px;
-    color: #2980B9;
+    color: rgba(0,0,0,0.87);
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    font-family: "Open Sans Condensed", sans-serif;
-    letter-spacing: 1px;
-    color: #2980B9;
+    color: rgba(0,0,0,0.87);
     background: rgba(200, 200, 200, 0.2);
 }
 
@@ -113,7 +117,7 @@ h1 {
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 125px;
+    height: 65px;
     font-size: 18px;
     line-height: 60px;
 }
@@ -132,10 +136,6 @@ h1 {
     height: 5px;
     background-color: #fcfcfc;
     margin: 6px 0;
-}
-
-.table-head {
-    color: #2980b9
 }
 
 @media(min-width:768px) {

@@ -2196,6 +2196,10 @@ a:hover {
     outline: 0
 }
 
+a {
+    text-decoration: none !important;
+}
+
 abbr[title] {
     border-bottom: 1px dotted
 }

@@ -26,13 +26,13 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <img src="/CoConstructSmall.png" class="img-responsive center-block" id="home-logo">
+                    <img src="/CoConstructSmall.png" class="img-responsive center-block" id="home-logo" style="margin-bottom: 15px;">
                 </li>
                 <li>
                     <h4>Clients</h4>
                 </li>
                 <li>
-                    <a href="client1.html">Wesley Martin</a>
+                    <a href="client1">Wesley Martin</a>
                 </li>
                 <li>
                     <a href="client2.html">Houston Crosby</a>
@@ -98,15 +98,15 @@
                                         <input type="text" class="form-control" id="name-input" placeholder="Client Name" required>
                                     </div>
                                     <div class="form-group">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="email-input" placeholder="Client Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="phone-input" placeholder="Client Phone #" required>
+                                        </div>
                                         <input type="text" class="form-control" id="address-input" placeholder="Project Address" required>
+                                        <button type="button" id="contact-submit" name="submit" class="btn btn-primary pull-left ">Save
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="email-input" placeholder="Client Email" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="phone-input" placeholder="Client Phone #" required>
-                                    </div>
-                                    <button type="button" id="contact-submit" name="submit" class="btn btn-primary pull-left ">Save
                                     </button>
                                 </form>
                             </div>
@@ -182,78 +182,78 @@
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-4">Progress<i class="material-icons right">close</i></span>
                                 <b>Kitchen</b>
-                                <p>40%</p>
+                                <p>43%</p>
                                 <hr>
                                 <b>Bathroom</b>
-                                <p>60%</p>
+                                <p>62%</p>
                                 <hr>
                                 <b>Patio</b>
-                                <p>75%</p>
+                                <p>0%</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/Files.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Files<i class="material-icons right">more_vert</i></span>
-                            <p></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Files<i class="material-icons right">close</i></span>
-                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
-                            
-            <h1>Upload File</h1>
-            
-            <div class="col-md-6"></div>
-            <input type="file" id="fileButton"/>
-            <label id="lblFile"></label>
-           
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Files.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Files<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Files<i class="material-icons right">close</i></span>
+                                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+                                <h1>Upload File</h1>
+                                <div class="col-md-6"></div>
+                                <input type="file" id="fileButton" />
+                                <label id="lblFile"></label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/Pictures.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Images<i class="material-icons right">more_vert</i></span>
-                            <p></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Images<i class="material-icons right">close</i></span>
-                            <div id="displayImages"></div>
-                            <!-- <p><a href="#">This is a link</a></p>
-                            <p><a href="#">This is a link</a></p>
-                            <p><a href="#">This is a link</a></p>
-                            <p><a href="#">This is a link</a></p>
-                            <p><a href="#">This is a link</a></p> -->
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/Pictures.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Images<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Images<i class="material-icons right">close</i></span>
+                                <div id="displayImages"></div>
+                               
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="/comments.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Comments<i class="material-icons right">more_vert</i></span>
-                            <p></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Comments<i class="material-icons right">close</i></span>
-                            <p>Commenting function will go here if we can figure it out.</p>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/comments.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Comments<i class="material-icons right">more_vert</i></span>
+                                <p></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Comments<i class="material-icons right">close</i></span>
+                                <ul id="messages">
+                                    <div class="col-md-6"></div>
+                                </ul>
+                                <input type="text" width="100" id="msg">
+                                <input type="button" width="20" value="Send" id="send" class="btn btn-primary pull-left ">
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <!-- /#page-content-wrapper -->
     </div>
@@ -273,7 +273,7 @@
     });
     </script>
     <script type="text/javascript" src="/javascript.js" </script>
-    < script src = "https://code.jquery.com/jquery-3.1.1.min.js" >
+    <script src = "https://code.jquery.com/jquery-3.1.1.min.js">
     </script>
 </body>
 
