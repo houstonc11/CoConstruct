@@ -353,27 +353,27 @@
         });
     });
 
-    $("#send").click(function() {
-        console.log('sending message to firebase');
-        var msg = $("#msg").val();
-        console.log(msg);
-        var databaseRef = firebase.database().ref("chat").child("clientName");
-        databaseRef.push(msg);
+    // $("#send").click(function() {
+    //     console.log('sending message to firebase');
+    //     var msg = $("#msg").val();
+    //     console.log(msg);
+    //     var databaseRef = firebase.database().ref("chat").child("clientName");
+    //     databaseRef.push(msg);
 
-        $("#msg").val('');
-    });
+    //     $("#msg").val('');
+    // });
 
-    $("#msg").keyup(function(event) {
-        if (event.keyCode == 13) {
-            $("#send").click();
-        }
-    });
-
-
-    database.ref("/chat/clientName").on("child_added", function(childSnapshot) {
-
-        var clientChat = childSnapshot.val();
-        $("#messages").append("<li>" + clientChat + "</li><br>");
+    // $("#msg").keyup(function(event) {
+    //     if (event.keyCode == 13) {
+    //         $("#send").click();
+    //     }
+    // });
 
 
-    });
+    // database.ref("/chat/clientName").on("child_added", function(childSnapshot) {
+
+    //     var clientChat = childSnapshot.val();
+    //     $("#messages").append("<li>" + clientChat + "</li><br>");
+
+
+    // });
